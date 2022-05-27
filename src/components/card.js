@@ -1,5 +1,5 @@
 import React from "react";
-import Selfie from "../images/Selfie.jpg";
+import Selfie from "../images/profile-pic.jpeg";
 import Navbar from "../components/navbar";
 
 export default function Card() {
@@ -27,16 +27,43 @@ export default function Card() {
       <div className="inner-box-bottom">
         <h3>About</h3>
         <p>
-          Commodo exercitation aute consectetur dolore duis ea eu cupidatat aute
-          nostrud id aute. Et reprehenderit duis tempor elit excepteur ea
-          exercitation esse. Commodo sunt velit aliquip Lorem exercitation culpa
-          ea id voluptate pariatur est.
+          I am a full-stack engineer and graduate of Momentum Learning.
+          Currently open for interviews, I'm most interested in front-end work
+          but I have experience in Python and Django as well!
         </p>
-        <h3>Interests</h3>
-        <p>
-          Ea in et anim dolor adipisicing ut. Sit reprehenderit ad dolor
-          ullamco. Consequat in ex elit consequat velit enim et ex sint.
-        </p>
+        <h3>Skills</h3>
+        <ul>
+          <li>
+            <span>
+              <ion-icon name="logo-javascript"></ion-icon>
+            </span>
+            <span>JavaScript</span>
+          </li>
+          <li>
+            <span>
+              <ion-icon name="logo-react"></ion-icon>
+            </span>
+            <span>React.JS</span>
+          </li>
+          <li>
+            <span>
+              <ion-icon name="logo-python"></ion-icon>
+            </span>
+            <span>Python</span>
+          </li>
+          <li>
+            <span>
+              <ion-icon name="logo-python"></ion-icon>
+            </span>
+            <span>Django</span>
+          </li>
+          <li>
+            <span>
+              <ion-icon name="logo-html5"></ion-icon>
+            </span>
+            <span>Html/CSS</span>
+          </li>
+        </ul>
       </div>
       <Navbar />
     </div>
