@@ -4,7 +4,10 @@ import emailjs from "@emailjs/browser";
 export default function EmailButton() {
   const form = useRef();
 
-  function openForm() {
+  function formDisplay() {
+    if ((document.getElementById("form").style.display = "block")) {
+      document.getElementById("form").style.display = "none";
+    }
     document.getElementById("form").style.display = "block";
   }
 
@@ -29,7 +32,7 @@ export default function EmailButton() {
   }
   return (
     <>
-      <button type="button" className="button" onClick={openForm}>
+      <button type="button" className="button" onClick={formDisplay}>
         <span className="button-text">Email</span>
         <span className="button-icon">
           <ion-icon name="mail-outline"></ion-icon>
