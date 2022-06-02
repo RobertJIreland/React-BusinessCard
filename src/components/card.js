@@ -1,6 +1,7 @@
 import React from "react";
 import Selfie from "../images/profile-pic.jpeg";
 import Navbar from "../components/navbar";
+import EmailButton from "../components/emailButton";
 
 export default function Card() {
   return (
@@ -10,12 +11,7 @@ export default function Card() {
         <h1>RJ Ireland</h1>
         <h2>Software Developer</h2>
         <div className="inner-box-top-buttons">
-          <button type="button" className="button">
-            <span className="button-text">Email</span>
-            <span className="button-icon">
-              <ion-icon name="mail-outline"></ion-icon>
-            </span>
-          </button>
+          <EmailButton />
           <button type="button" className="button">
             <span className="button-text">LinkedIn</span>
             <span className="button-icon">
