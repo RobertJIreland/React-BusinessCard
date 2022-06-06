@@ -4,7 +4,7 @@
     font-family: 'Raleway';
 }
 
-.outer-box {
+/* .outer-box {
     align-items: center;
     margin: auto;
     width: 350px;
@@ -13,13 +13,13 @@
     border-radius: 2%;
     overflow: hidden;
     background-color: #C2D3CD;
-}
+} */
 
-img.profile {
-    border-radius: 2%;
+/* img.profile {
     width: 100%;
+    max-width: 350px;
     height: 230px;
-}
+} */
 
 .inner-box-top {
     display: flex;
@@ -159,3 +159,9 @@ nav {
     height: 50px;
     width: 50px;
 }
+
+@media only screen and (max-width: 600px) {
+    .outer-box {
+        width: 100%;
+    }
+  }

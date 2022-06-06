@@ -1,12 +1,13 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import Button from "@mui/material/Button";
+import SendIcon from "@mui/icons-material/Send";
 
 export default function EmailButton() {
   const [open, setOpen] = useState(false);
   const form = useRef();
 
   function formDisplay() {
-    // document.getElementById("form").style.display = "block";
     setOpen(!open);
   }
 
@@ -42,7 +43,7 @@ export default function EmailButton() {
 
       {open && (
         <div className="form-popup" id="form">
-          <form className="form-container" ref={form} onSubmit={sendEmail}>
+          <form className="form-container" ref={form}>
             <label htmlFor="name">Name</label>
             <input type="text" placeholder="Enter Name" name="name" required />
             <label htmlFor="email">Email</label>
@@ -58,7 +59,13 @@ export default function EmailButton() {
               name="message"
               required
             />
-            <input type="submit" value="Send" />
+            <Button
+              variant="contained"
+              onClick={sendEmail}
+              endIcon={<SendIcon />}
+            >
+              Send
+            </Button>
           </form>
         </div>
       )}

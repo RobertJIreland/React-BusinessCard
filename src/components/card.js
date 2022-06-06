@@ -1,12 +1,36 @@
 import React from "react";
 import Selfie from "../images/profile-pic.jpeg";
+import Grid from "@mui/material/Grid";
+import Avatar from "@mui/material/Avatar";
 import Navbar from "../components/navbar";
 import EmailButton from "../components/emailButton";
 
 export default function Card() {
   return (
-    <div className="outer-box">
-      <img className="profile" src={Selfie} alt="Profile of RJ Ireland" />
+    // <div className="outer-box">
+    <Grid
+      container
+      direction="column"
+      justifyContent="center"
+      alignItems="center"
+      style={{
+        margin: "auto",
+        width: 350,
+        height: "fit-content",
+        borderStyle: "solid",
+        borderRadius: "2%",
+        overflow: "hidden",
+        backgroundColor: "#C2D3CD",
+      }}
+    >
+      <Grid item xs={0}>
+        <Avatar
+          alt="RJ Ireland"
+          src={Selfie}
+          sx={{ height: 235, width: 235 }}
+        />
+      </Grid>
+      {/* <img className="profile" src={Selfie} alt="Profile of RJ Ireland" /> */}
       <div className="inner-box-top">
         <h1>RJ Ireland</h1>
         <h2>Software Developer</h2>
@@ -62,6 +86,7 @@ export default function Card() {
         </ul>
       </div>
       <Navbar />
-    </div>
+    </Grid>
+    // </div>
   );
 }
