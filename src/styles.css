@@ -141,16 +141,16 @@ nav {
     background-color: darkgray;
 }
 
-.icon {
+/* .icon {
     padding: 0;
     border: none;
     outline: none;
     background: none;
-}
+} */
 
-.icon:hover {
+/* .icon:hover {
     cursor: pointer;
-}
+} */
 
 .navImg {
     height: 50px;

@@ -1,6 +1,8 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import Button from "@mui/material/Button";
+import Box from "@mui/material/Box";
+import TextField from "@mui/material/TextField";
 import EmailIcon from "@mui/icons-material/Email";
 import SendIcon from "@mui/icons-material/Send";
 
@@ -35,14 +37,9 @@ export default function EmailButton() {
   }
   return (
     <>
-      {/* <button type="button" className="button" onClick={formDisplay}>
-        <span className="button-text">Email</span>
-        <span className="button-icon">
-          <ion-icon name="mail-outline"></ion-icon>
-        </span>
-      </button> */}
       <Button
         variant="contained"
+        color="primary"
         onClick={formDisplay}
         endIcon={<EmailIcon />}
         style={{
@@ -54,32 +51,56 @@ export default function EmailButton() {
       </Button>
 
       {open && (
-        <div className="form-popup" id="form">
-          <form className="form-container" ref={form}>
-            <label htmlFor="name">Name</label>
-            <input type="text" placeholder="Enter Name" name="name" required />
-            <label htmlFor="email">Email</label>
-            <input
-              type="email"
-              placeholder="Enter Email"
-              name="email"
+        <Box component="form" noValidate autoComplete="off">
+          <div>
+            <TextField required label="Name" />
+          </div>
+          <div>
+            <TextField required label="Email" />
+          </div>
+          <div>
+            <TextField
+              multiline
+              maxRows={4}
+              rows={4}
               required
+              label="Message"
             />
-            <label htmlFor="message"></label>
-            <textarea
-              placeholder="Enter message here..."
-              name="message"
-              required
-            />
-            <Button
-              variant="contained"
-              onClick={sendEmail}
-              endIcon={<SendIcon />}
-            >
-              Send
-            </Button>
-          </form>
-        </div>
+          </div>
+          <Button
+            variant="contained"
+            onClick={sendEmail}
+            endIcon={<SendIcon />}
+          >
+            Send
+          </Button>
+        </Box>
+        // <div className="form-popup" id="form">
+        //   <form className="form-container" ref={form}>
+        //     <label htmlFor="name">Name</label>
+        //     <input type="text" placeholder="Enter Name" name="name" required />
+        //     <label htmlFor="email">Email</label>
+        //     <input
+        //       type="email"
+        //       placeholder="Enter Email"
+        //       name="email"
+        //       required
+        //     />
+        //     <label htmlFor="message"></label>
+        //     <textarea
+        //       placeholder="Enter message here..."
+        //       name="message"
+        //       required
+        //     />
+        //     <Button
+        //       variant="contained"
+        //       onClick={sendEmail}
+        //       endIcon={<SendIcon />}
+        //     >
+        //       Send
+        //     </Button>
+        //   </form>
+        // </div>
       )}
     </>
   );

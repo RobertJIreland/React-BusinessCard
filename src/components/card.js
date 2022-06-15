@@ -1,6 +1,7 @@
 import React from "react";
 import Selfie from "../images/profile-pic.jpeg";
 import Grid from "@mui/material/Grid";
+import Chip from "@mui/material/Chip";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
@@ -9,7 +10,6 @@ import EmailButton from "../components/emailButton";
 
 export default function Card() {
   return (
-    // <div className="outer-box">
     <Grid
       container
       direction="column"
@@ -59,6 +59,7 @@ export default function Card() {
         <Grid item>
           <Button
             variant="contained"
+            color="primary"
             href="https://www.linkedin.com/in/robert-ireland/"
             endIcon={<LinkedInIcon />}
             style={{
@@ -70,50 +71,44 @@ export default function Card() {
           </Button>
         </Grid>
       </Grid>
-
-      <div className="inner-box-bottom">
-        <h3>About</h3>
-        <p>
-          I am a full-stack engineer and graduate of Momentum Learning.
-          Currently open for interviews, I'm most interested in front-end work
-          but I have experience in Python and Django as well!
-        </p>
-        <h3>Skills</h3>
-        <ul>
-          <li>
-            <span>
-              <ion-icon name="logo-javascript"></ion-icon>
-            </span>
-            <span>JavaScript</span>
-          </li>
-          <li>
-            <span>
-              <ion-icon name="logo-react"></ion-icon>
-            </span>
-            <span>React.JS</span>
-          </li>
-          <li>
-            <span>
-              <ion-icon name="logo-python"></ion-icon>
-            </span>
-            <span>Python</span>
-          </li>
-          <li>
-            <span>
-              <ion-icon name="logo-python"></ion-icon>
-            </span>
-            <span>Django</span>
-          </li>
-          <li>
-            <span>
-              <ion-icon name="logo-html5"></ion-icon>
-            </span>
-            <span>Html/CSS</span>
-          </li>
-        </ul>
-      </div>
+      <h3>About</h3>
+      <p>
+        I am a full-stack engineer and graduate of Momentum Learning. Currently
+        open for interviews, I'm most interested in front-end work but I have
+        experience in Python and Django as well!
+      </p>
+      <h3>Skills</h3>
+      <Chip
+        color="primary"
+        size="small"
+        icon={<ion-icon name="logo-javascript"></ion-icon>}
+        label="JavaScript"
+      />
+      <Chip
+        color="primary"
+        size="small"
+        icon={<ion-icon name="logo-react"></ion-icon>}
+        label="React"
+      />
+      <Chip
+        color="primary"
+        size="small"
+        icon={<ion-icon name="logo-python"></ion-icon>}
+        label="Python"
+      />
+      <Chip
+        color="primary"
+        size="small"
+        icon={<ion-icon name="logo-python"></ion-icon>}
+        label="Django"
+      />
+      <Chip
+        color="primary"
+        size="small"
+        icon={<ion-icon name="logo-html5"></ion-icon>}
+        label="HTML/CSS"
+      />
       <Navbar />
     </Grid>
-    // </div>
   );
 }
