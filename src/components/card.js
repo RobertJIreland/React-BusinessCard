@@ -2,6 +2,8 @@ import React from "react";
 import Selfie from "../images/profile-pic.jpeg";
 import Grid from "@mui/material/Grid";
 import Avatar from "@mui/material/Avatar";
+import Button from "@mui/material/Button";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import Navbar from "../components/navbar";
 import EmailButton from "../components/emailButton";
 
@@ -29,21 +31,46 @@ export default function Card() {
           src={Selfie}
           sx={{ height: 235, width: 235 }}
         />
+        {/* <img className="profile" src={Selfie} alt="Profile of RJ Ireland" /> */}
       </Grid>
-      {/* <img className="profile" src={Selfie} alt="Profile of RJ Ireland" /> */}
-      <div className="inner-box-top">
-        <h1>RJ Ireland</h1>
-        <h2>Software Developer</h2>
-        <div className="inner-box-top-buttons">
+      <Grid
+        container
+        direction="row"
+        justifyContent="center"
+        style={{ fontWeight: 900, margin: "auto" }}
+      >
+        <Grid item>
+          <h1>RJ Ireland</h1>
+        </Grid>
+        <Grid item>
+          <h2>Software Developer</h2>
+        </Grid>
+      </Grid>
+      <Grid
+        container
+        direction="row"
+        justifyContent="center"
+        alignItems="center"
+        spacing={5}
+      >
+        <Grid item>
           <EmailButton />
-          <button type="button" className="button">
-            <span className="button-text">LinkedIn</span>
-            <span className="button-icon">
-              <ion-icon name="logo-linkedin"></ion-icon>
-            </span>
-          </button>
-        </div>
-      </div>
+        </Grid>
+        <Grid item>
+          <Button
+            variant="contained"
+            href="https://www.linkedin.com/in/robert-ireland/"
+            endIcon={<LinkedInIcon />}
+            style={{
+              height: "25px",
+              fontSize: "16px",
+            }}
+          >
+            LinkedIn
+          </Button>
+        </Grid>
+      </Grid>
+
       <div className="inner-box-bottom">
         <h3>About</h3>
         <p>

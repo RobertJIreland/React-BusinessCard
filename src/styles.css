@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    font-family: 'Raleway';
+    font-family: 'Raleway', 'Times New Roman', Times, serif;;
 }
 
 /* .outer-box {
@@ -21,13 +21,13 @@
     height: 230px;
 } */
 
-.inner-box-top {
+/* .inner-box-top {
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
+} */
 
-h1 {
+/* h1 {
     justify-content: center;
     margin: auto;
     font-weight: 900;
@@ -37,29 +37,26 @@ h2 {
     justify-content: center;
     margin: auto;
     font-size: 1em;
-}
+} */
 
-.inner-box-top-buttons {
+/* .inner-box-top-buttons {
     display: inline-flex;
     text-align: center;
     justify-content: space-between;
-}
+} */
 
-.button {
-    display: inline-flex;
+/* .button {
     height: 25px;
-    padding: 0;
     margin: 5px 25px;
     border: none;
     outline: none;
     border-radius: 5px;
     overflow: hidden;
-    font-family: 'Raleway', 'Times New Roman', Times, serif;
     font-size: 16px;
     font-weight: 500;
     cursor: pointer;
     background: #9FA4A9;
-}
+ } */
 
 .form-popup {
     
@@ -89,7 +86,7 @@ h2 {
     outline: none;
   }
 
-.button:hover {
+.Button:hover {
     background: #847E89;
 }
 

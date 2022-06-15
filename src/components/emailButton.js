@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import Button from "@mui/material/Button";
+import EmailIcon from "@mui/icons-material/Email";
 import SendIcon from "@mui/icons-material/Send";
 
 export default function EmailButton() {
@@ -34,12 +35,23 @@ export default function EmailButton() {
   }
   return (
     <>
-      <button type="button" className="button" onClick={formDisplay}>
+      {/* <button type="button" className="button" onClick={formDisplay}>
         <span className="button-text">Email</span>
         <span className="button-icon">
           <ion-icon name="mail-outline"></ion-icon>
         </span>
-      </button>
+      </button> */}
+      <Button
+        variant="contained"
+        onClick={formDisplay}
+        endIcon={<EmailIcon />}
+        style={{
+          height: "25px",
+          fontSize: "16px",
+        }}
+      >
+        Email
+      </Button>
 
       {open && (
         <div className="form-popup" id="form">
