@@ -15,6 +15,7 @@ export default function Navbar() {
         width: 350,
         backgroundColor: "#A9A9A9",
         borderRadius: "2%",
+        marginTop: 1,
       }}
     >
       <Grid

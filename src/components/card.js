@@ -71,43 +71,78 @@ export default function Card() {
           </Button>
         </Grid>
       </Grid>
-      <h3>About</h3>
-      <p>
-        I am a full-stack engineer and graduate of Momentum Learning. Currently
-        open for interviews, I'm most interested in front-end work but I have
-        experience in Python and Django as well!
-      </p>
-      <h3>Skills</h3>
-      <Chip
-        color="primary"
-        size="small"
-        icon={<ion-icon name="logo-javascript"></ion-icon>}
-        label="JavaScript"
-      />
-      <Chip
-        color="primary"
-        size="small"
-        icon={<ion-icon name="logo-react"></ion-icon>}
-        label="React"
-      />
-      <Chip
-        color="primary"
-        size="small"
-        icon={<ion-icon name="logo-python"></ion-icon>}
-        label="Python"
-      />
-      <Chip
-        color="primary"
-        size="small"
-        icon={<ion-icon name="logo-python"></ion-icon>}
-        label="Django"
-      />
-      <Chip
-        color="primary"
-        size="small"
-        icon={<ion-icon name="logo-html5"></ion-icon>}
-        label="HTML/CSS"
-      />
+      <Grid container sx={{ margin: 0.5, marginLeft: 1 }}>
+        <Grid item>
+          <h3>About</h3>
+        </Grid>
+        <Grid item sx={{ padding: 0.5, paddingLeft: 0 }}>
+          <p>
+            I am a full-stack engineer and graduate of Momentum Learning.
+            Currently open for interviews, I'm most interested in front-end work
+            but I have experience in Python and Django as well!
+          </p>
+        </Grid>
+        <Grid item>
+          <h3>Skills</h3>
+        </Grid>
+      </Grid>
+      <Grid container spacing={1}>
+        <Grid item>
+          <Chip
+            color="primary"
+            size="small"
+            icon={<ion-icon name="logo-javascript"></ion-icon>}
+            label="JavaScript"
+            sx={{
+              width: 100,
+            }}
+          />
+        </Grid>
+        <Grid item>
+          <Chip
+            color="primary"
+            size="small"
+            icon={<ion-icon name="logo-react"></ion-icon>}
+            label="React"
+            sx={{
+              width: 100,
+            }}
+          />
+        </Grid>
+        <Grid item>
+          <Chip
+            color="primary"
+            size="small"
+            icon={<ion-icon name="logo-python"></ion-icon>}
+            label="Python"
+            sx={{
+              width: 100,
+            }}
+          />
+        </Grid>
+        <Grid item>
+          <Chip
+            color="primary"
+            size="small"
+            icon={<ion-icon name="logo-python"></ion-icon>}
+            label="Django"
+            sx={{
+              width: 100,
+            }}
+          />
+        </Grid>
+        <Grid item>
+          <Chip
+            color="primary"
+            size="small"
+            icon={<ion-icon name="logo-html5"></ion-icon>}
+            label="HTML/CSS"
+            sx={{
+              width: 100,
+            }}
+          />
+        </Grid>
+      </Grid>
       <Navbar />
     </Grid>
   );
