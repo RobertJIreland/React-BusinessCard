@@ -11,6 +11,7 @@ import EmailButton from "../components/emailButton";
 export default function Card() {
   return (
     <Grid
+      className="outer-box"
       container
       direction="column"
       justifyContent="center"
@@ -18,7 +19,6 @@ export default function Card() {
       style={{
         margin: "auto",
         width: 350,
-        height: "fit-content",
         borderStyle: "solid",
         borderRadius: "2%",
         overflow: "hidden",
@@ -53,19 +53,15 @@ export default function Card() {
         alignItems="center"
         spacing={5}
       >
-        <Grid item>
+        <Grid item sx={{ marginTop: 0.5 }}>
           <EmailButton />
         </Grid>
-        <Grid item>
+        <Grid item sx={{ marginTop: 0.5 }}>
           <Button
             variant="contained"
             color="primary"
             href="https://www.linkedin.com/in/robert-ireland/"
             endIcon={<LinkedInIcon />}
-            style={{
-              height: "25px",
-              fontSize: "16px",
-            }}
           >
             LinkedIn
           </Button>

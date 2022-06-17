@@ -42,16 +42,17 @@ export default function EmailButton() {
         color="primary"
         onClick={formDisplay}
         endIcon={<EmailIcon />}
-        style={{
-          height: "25px",
-          fontSize: "16px",
-        }}
       >
         Email
       </Button>
 
       {open && (
-        <Box component="form" ref={form} autoComplete="off">
+        <Box
+          component="form"
+          ref={form}
+          autoComplete="off"
+          className="form-popup"
+        >
           <div>
             <TextField label="Name" />
           </div>
