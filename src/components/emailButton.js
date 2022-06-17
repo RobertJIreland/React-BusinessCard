@@ -51,21 +51,15 @@ export default function EmailButton() {
       </Button>
 
       {open && (
-        <Box component="form" noValidate autoComplete="off">
+        <Box component="form" ref={form} autoComplete="off">
           <div>
-            <TextField required label="Name" />
+            <TextField label="Name" />
           </div>
           <div>
-            <TextField required label="Email" />
+            <TextField label="Email" />
           </div>
           <div>
-            <TextField
-              multiline
-              maxRows={4}
-              rows={4}
-              required
-              label="Message"
-            />
+            <TextField multiline rows={4} label="Message" />
           </div>
           <Button
             variant="contained"
@@ -75,32 +69,6 @@ export default function EmailButton() {
             Send
           </Button>
         </Box>
-        // <div className="form-popup" id="form">
-        //   <form className="form-container" ref={form}>
-        //     <label htmlFor="name">Name</label>
-        //     <input type="text" placeholder="Enter Name" name="name" required />
-        //     <label htmlFor="email">Email</label>
-        //     <input
-        //       type="email"
-        //       placeholder="Enter Email"
-        //       name="email"
-        //       required
-        //     />
-        //     <label htmlFor="message"></label>
-        //     <textarea
-        //       placeholder="Enter message here..."
-        //       name="message"
-        //       required
-        //     />
-        //     <Button
-        //       variant="contained"
-        //       onClick={sendEmail}
-        //       endIcon={<SendIcon />}
-        //     >
-        //       Send
-        //     </Button>
-        //   </form>
-        // </div>
       )}
     </>
   );

@@ -86,35 +86,31 @@ h2 {
     outline: none;
   }
 
-.Button:hover {
+/* .button:hover {
     background: #847E89;
 }
 
 .button:active {
     background: #56494C;
-}
+} */
 
-.button-text,
-.button-icon {
+/* .button-icon {
     display: inline-flex;
     align-items: center;
     padding: 0 12px;
     height: 100%;
-}
-
-.button-icon {
     font-size: 1.5em;
     background: rgb(0, 0, 0, 0.08);
-}
+} */
 
-.inner-box-bottom {
+/* .inner-box-bottom {
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-left: 5px;
     margin-right: 5px;
-}
-ul {
+} */
+/* ul {
     columns: 2;
     list-style-type: none;
     margin-bottom: 5px;
@@ -127,8 +123,8 @@ li {
     border-radius: 5px;
     margin: 5px;
     padding: 0;
-}
-nav {
+} */
+/* nav {
     display: flex;
     flex-direction: row;
     padding-bottom: 5px;
@@ -139,7 +135,7 @@ nav {
     width: auto;
     justify-content: space-between;
     background-color: darkgray;
-}
+} */
 
 /* .icon {
     padding: 0;
