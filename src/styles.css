@@ -1,7 +1,5 @@
 * {
-    box-sizing: border-box;
     margin: 0;
-    font-family: 'Raleway', 'Times New Roman', Times, serif;;
 }
 
 .form-popup {
@@ -11,8 +9,6 @@
     right: 15px;
     border-style: solid;
     border-radius: 2%;
-    z-index: 9;
-    max-width: 300px;
     padding: 10px;
     background-color: #C2D3CD;
   }
@@ -25,6 +21,7 @@
 @media only screen and (max-width: 600px) {
     .outer-box {
         width: 100%;
+        height: 100%;
     }
   }
 

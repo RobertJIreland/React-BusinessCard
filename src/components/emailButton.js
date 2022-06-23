@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid";
 import TextField from "@mui/material/TextField";
 import EmailIcon from "@mui/icons-material/Email";
 import SendIcon from "@mui/icons-material/Send";
@@ -26,7 +27,7 @@ export default function EmailButton() {
       )
       .then(
         (result) => {
-          console.log(result.text);
+          alert("Email sent");
         },
         (error) => {
           console.log(error.text);
@@ -42,6 +43,16 @@ export default function EmailButton() {
         color="primary"
         onClick={formDisplay}
         endIcon={<EmailIcon />}
+        sx={{
+          "&.MuiButton-root": {
+            "&:hover": {
+              backgroundColor: "#847E89",
+            },
+            "&:active": {
+              backgroundColor: "#56494C",
+            },
+          },
+        }}
       >
         Email
       </Button>
@@ -53,22 +64,41 @@ export default function EmailButton() {
           autoComplete="off"
           className="form-popup"
         >
-          <div>
-            <TextField label="Name" />
-          </div>
-          <div>
-            <TextField label="Email" />
-          </div>
-          <div>
-            <TextField multiline rows={4} label="Message" />
-          </div>
-          <Button
-            variant="contained"
-            onClick={sendEmail}
-            endIcon={<SendIcon />}
-          >
-            Send
-          </Button>
+          <Grid container direction="column" spacing={1}>
+            <Grid item>
+              <h4>Feel free to reach out via email.</h4>
+              <div>
+                <TextField label="Name" />
+              </div>
+            </Grid>
+            <Grid item>
+              <div>
+                <TextField label="Email" />
+              </div>
+            </Grid>
+            <Grid item>
+              <div>
+                <TextField multiline rows={4} label="Message" />
+              </div>
+            </Grid>
+            <Button
+              variant="contained"
+              onClick={sendEmail}
+              endIcon={<SendIcon />}
+              sx={{
+                "&.MuiButton-root": {
+                  "&:hover": {
+                    backgroundColor: "#847E89",
+                  },
+                  "&:active": {
+                    backgroundColor: "#56494C",
+                  },
+                },
+              }}
+            >
+              Send
+            </Button>
+          </Grid>
         </Box>
       )}
     </>
